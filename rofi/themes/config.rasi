@@ -1,0 +1,7 @@
+// @theme "~/.local/share/rofi/themes/arc_dark_transparent_colors.rasi"
+
+//@theme "/home/xeliotrop/.local/share/rofi/themes/arc_dark_transparent_colors.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+@theme "/usr/share/rofi/themes/android_notification.rasi"

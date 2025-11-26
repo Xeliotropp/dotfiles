@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763148144/share/lua/5.1/?.lua;/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763148144/share/lua/5.1/?/init.lua;/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763148144/lib/luarocks/rocks-5.1/?.lua;/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763148144/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763148144/lib/lua/5.1/?.so"
+local package_path_str = "/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763318511/share/lua/5.1/?.lua;/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763318511/share/lua/5.1/?/init.lua;/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763318511/lib/luarocks/rocks-5.1/?.lua;/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763318511/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/xeliotrop/.cache/nvim/packer_hererocks/2.1.1763318511/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -85,6 +85,7 @@ _G.packer_plugins = {
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   catppuccin = {
+    config = { "\27LJ\2\nD\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\21catppuccin-mocha\16colorscheme\bcmd\bvim\0" },
     loaded = true,
     path = "/home/xeliotrop/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -207,6 +208,10 @@ time([[Config for vim-tmux-navigator]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\nD\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\21catppuccin-mocha\16colorscheme\bcmd\bvim\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

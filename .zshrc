@@ -11,6 +11,8 @@ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 PATH=$JAVA_HOME/bin:$PATH
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
+export LIBVA_DRIVER_NAME=nvidia
+export MOZ_DISABLE_RDD_SANDBOX=1
 
 # Lazy-load NVM for faster startup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
