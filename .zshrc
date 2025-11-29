@@ -1,18 +1,33 @@
+# Download Zinit if not available
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
+# Set theme
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORMTHEME=qt6ct
+
+# Check if zoxide and starship are installed, if not - install them
+if [ -f /usr/bin/zoxide ]; then
+  eval "$(zoxide init zsh)"
+else
+  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
+if [ -f /usr/bin/starship ]; then
+  eval "$(starship init zsh)"
+else
+  curl -sS https://starship.rs/install.sh | sh
+fi
+
+# Paths
 export PATH="$HOME/.local/bin:$PATH"
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 PATH=$JAVA_HOME/bin:$PATH
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 export LIBVA_DRIVER_NAME=nvidia
 export MOZ_DISABLE_RDD_SANDBOX=1
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 # Lazy-load NVM for faster startup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -32,7 +47,6 @@ npm() {
   npm "$@"
 }
 
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -68,14 +82,17 @@ alias grep="rg"
 eval "$(fzf --zsh)"
 
 
+# Aliases
 export EDITOR=nvim
 export VISUAL=nvim
 alias vim="nvim"
-alias pacman='sudo pacman'
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
+alias paruf="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias cd="z"
 alias ..="cd .."
 alias ...="cd ../../"
 alias shutdown="shutdown -h now"
+alias neofetch="fastfetch"
+
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -86,7 +103,8 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-#echo "Hello, $USER! Today is $(date '+%A, %B %d, %Y')"
 if [ -f /usr/bin/fastfetch ];  then 
-  fastfetch
+  neofetch
+else
+  sudo pacman -S fastfetch
 fi

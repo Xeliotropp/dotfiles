@@ -10,3 +10,5 @@ vim.opt.signcolumn = "auto"  -- Always show the signcolumn (for git signs, diagn
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true

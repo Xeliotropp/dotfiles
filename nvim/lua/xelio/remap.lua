@@ -17,3 +17,6 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { silent = true })
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { silent = true })
 vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { silent = true })
 vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { silent = true })
+vim.keymap.set('x', '<leader>p', '\'_dP')
+
+

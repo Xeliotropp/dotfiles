@@ -2,7 +2,7 @@ include ~/.config/i3/keybinds.conf
 font pango:FiraCode Regular 10
 #removes the titlebar text
 # Set border width
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 for_window [class=".*"] title_format " "
 for_window [class="Thunar" instance="thunar"] floating enable
 gaps inner 4px
@@ -24,13 +24,14 @@ exec_always --no-startup-id dunst
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id pkill flameshot || true; flameshot &
 exec_always --no-startup-id ~/.config/scripts/profile.sh
+exec_always --no-startup-id dropbox
 #use the command below when using the tv 
 #xrandr --output HDMI-1-0 --auto --right-of eDP-1
 
 
-client.focused          #a6da95   #a6da95 #a6da95 #a6da95 #a6da95
+client.focused          #8839ef   #8839ef #8839ef #8839ef #8839ef
 client.focused_inactive #00000000 #00000000 #00000000 #00000000 #00000000
 client.unfocused        #00000000 #00000000 #00000000 #00000000 #00000000
-client.urgent           #00000000 #00000000 #00000000 #00000000 #00000000
+client.urgent           #e64553 #e64553 #e64553 #e64553 #e64553
 client.placeholder      #00000000 #00000000 #00000000 #00000000 #00000000
 
