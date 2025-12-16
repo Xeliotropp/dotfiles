@@ -1,6 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -18,8 +15,8 @@ return require('packer').startup(function(use)
     end
 }
   
-  use ({'nvim-treesitter/nvim-treesitter'}, {run= ':TSUpdate'})
-  use ({'nvim-treesitter/playground'})
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'nvim-treesitter/playground'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -47,6 +44,7 @@ return require('packer').startup(function(use)
     }
   }
   use {"williamboman/mason.nvim"}
+  use {'williamboman/mason-lspconfig.nvim'}
   use {
   'hrsh7th/nvim-cmp',
   requires = {
@@ -71,4 +69,7 @@ use {
     vim.g.tmux_navigator_preserve_zoom = 1
   end
 }
+use('neovim/nvim-lspconfig')
+use('jose-elias-alvarez/null-ls.nvim')
+use('MunifTanjim/prettier.nvim')
 end)

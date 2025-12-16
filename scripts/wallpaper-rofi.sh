@@ -10,7 +10,6 @@ cd $dir
 wallpaper="none is selected" 
 set="feh --bg-fill"
 view="feh"
-startup_config_file="/home/$USER/.config/bspwm/bspwmrc" #change this to whatever config file that sets your wallpaper on startup, this file will get modified if you choose tp set a wallpaper permanantly 
 
 ########################-FUNCTION FOR SELECTING A WALLPAPER-###################
 selectpic(){
@@ -39,7 +38,7 @@ action(){
 
 ########-FUNCTION TO SET THE SELECTED WALLPAPER, BUT IT IS NOT PERMANANT, THE CHANGE WILL BE UNDONE AFTER LOGOUT OR REBOOT-#######
 set_wall(){
-    $set $wallpaper && killall feh &
+    $set $wallpaper #&& killall feh &
 }
 ###################################################################################################################################
 
@@ -57,17 +56,17 @@ set_after_view(){
   if [[ $setorno == "set (permanant)" ]]; then
       set_permanant
     else
-      killall feh && wch
+      # killall feh && wch
     fi
 }
 ################################################################################################
 
 #########-FUNCTION TO SET THE WALLPAPER permanantly, IT WILL MODIFY YOUR START UP CONFIG FILE-###########
-set_permanant(){
-  set_wall
-  sed -i '/feh/d' $startup_config_file
-  echo "$set $dir$wallpaper &" >> $startup_config_file
-}
+#set_permanant(){
+#  set_wall
+#  sed -i '/feh/d' $startup_config_file
+#  echo "$set $dir$wallpaper &" >> $startup_config_file
+#}
 #########################################################################################################
 
 ###################-MAIN-####################
