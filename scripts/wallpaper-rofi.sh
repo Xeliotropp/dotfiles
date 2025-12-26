@@ -56,7 +56,7 @@ set_after_view(){
   if [[ $setorno == "set (permanant)" ]]; then
       set_permanant
     else
-      # killall feh && wch
+      killall feh && wch
     fi
 }
 ################################################################################################

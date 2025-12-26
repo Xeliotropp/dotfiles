@@ -77,13 +77,12 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-color "${(s.:.)LS_COLORS}" 
 zstyle ':completion:*' menu no 
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'ls --color $realpath'
-alias ls="ls -l --color"
 eval "$(fzf --zsh)"
 
 
 # Aliases
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=/usr/sbin/nvim
+export VISUAL=/usr/sbin/nvim
 alias vim="nvim"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias cd="z"
@@ -93,6 +92,9 @@ alias shutdown="shutdown -h now"
 alias neofetch="fastfetch"
 alias grep="rg"
 alias rg=grep
+alias shut="shutdown"
+alias ls="ls -l --color"
+alias youtube="ytsurf"
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \

@@ -8,12 +8,12 @@ gaps inner 4px
 gaps outer 2px
 smart_borders on
 
+
 # auto start applications
 exec xrandr --auto
 exec --no-startup-id dex-autostart --autostart --environment i3
 exec_always --no-startup-id setxkbmap -layout us,bg -variant ,phonetic -option grp:alt_shift_toggle 
-exec ~/.fehbg
-exec --no-startup-id picom
+# exec ~/.fehbg
 exec_always --no-startup-id pkill polybar || true; polybar &
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id bash ~/dotfiles/scripts/docker-compose.bash &
@@ -21,15 +21,14 @@ exec_always --no-startup-id bash ~/dotfiles/scripts/docker-compose.bash &
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id dunst 
 # exec --no-startup-id xset s 300 0 
-exec --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 exec_always --no-startup-id pkill flameshot || true; flameshot &
 exec_always --no-startup-id ~/.config/scripts/profile.sh
-exec_always --no-startup-id dropbox
 #use the command below when using the tv 
 #xrandr --output HDMI-1-0 --auto --right-of eDP-1
 
 
-client.focused          #8839ef   #8839ef #8839ef #8839ef #8839ef
+client.focused          #a6e3a1   #a6e3a1 #a6e3a1 #a6e3a1 #a6e3a1
 client.focused_inactive #00000000 #00000000 #00000000 #00000000 #00000000
 client.unfocused        #00000000 #00000000 #00000000 #00000000 #00000000
 client.urgent           #e64553 #e64553 #e64553 #e64553 #e64553
