@@ -20,3 +20,4 @@ vim.diagnostic.config({
 	underline = false,
 	signs = false,
 })
+vim.g.gitsigns_toggle_current_line_blame = true
