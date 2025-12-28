@@ -13,7 +13,7 @@ smart_borders on
 exec xrandr --auto
 exec --no-startup-id dex-autostart --autostart --environment i3
 exec_always --no-startup-id setxkbmap -layout us,bg -variant ,phonetic -option grp:alt_shift_toggle 
-# exec ~/.fehbg
+exec ~/.fehbg
 exec_always --no-startup-id pkill polybar || true; polybar &
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id bash ~/dotfiles/scripts/docker-compose.bash &

@@ -28,6 +28,7 @@ export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 export LIBVA_DRIVER_NAME=nvidia
 export MOZ_DISABLE_RDD_SANDBOX=1
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export PATH=$PATH:$(npm config get prefix)/bin
 
 # Lazy-load NVM for faster startup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
