@@ -42,7 +42,7 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 1
-    frame_color = "#000000"
+    frame_color = "#1e1e2e"
     gap_size = 0
     separator_color = auto
     sort = yes
@@ -95,20 +95,20 @@
 
 
 [urgency_low]
-    background = "#000000"
+    background = "#1e1e2e"
     foreground = "#ffffff"
     timeout = 5
     icon = /usr/share/icons/Qogir/16/status/package-installed-outdated.svg
 
 [urgency_normal]
-    background = "#000000"
+    background = "#1e1e2e"
     foreground = "#ffffff"
     timeout = 5
     override_pause_level = 30
     icon = /usr/share/icons/Qogir/16/emblems/emblem-question.svg
 
 [urgency_critical]
-    background = "#000000"
+    background = "#1e1e2e"
     foreground = "#ffffff"
     frame_color = "#ff7f7f"
     timeout = 120

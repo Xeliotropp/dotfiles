@@ -12,18 +12,19 @@ input type:keyboard {
     xkb_variant ",phonetic"
     xkb_options "grp:alt_shift_toggle"
 } 
+bar { 
+     swaybar_command waybar
+}
+
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec --no-startup-id killall dockercompose || true; bash ~/dotfiles/scripts/docker-compose.bash &
-exec_always --no-startup-id waybar
 
 exec --no-startup-id dunst 
 exec --no-startup-id xset s 300 0 
 exec --no-startup-id autotiling
-exec_always --no-startup-id killall waybar || true; waybar &
 exec --no-startup-id ~/.config/scripts/profile.sh
 #use the command below when using the tv 
 #xrandr --output HDMI-1-0 --auto --right-of eDP-1
-
 
 client.focused          $green   $green $green $green $green 
 client.focused_inactive $overlay1 $overlay1 $overlay1 $overlay1 $overlay1  
@@ -31,4 +32,4 @@ client.unfocused        $overlay2 $overlay2 $overlay2 $overlay2 $overlay2
 client.urgent           $red $red $red $red $red 
 client.placeholder      #00000000 #00000000 #00000000 #00000000 #00000000
 
-output * bg /home/xeliotrop/wallpapers/catmas.jpg fill
+output * bg /home/xeliotrop/wallpapers/Bend.jpg fill
