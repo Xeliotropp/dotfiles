@@ -15,9 +15,9 @@ vim.opt.incsearch = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.g.loaded_perl_provider = 0
+vim.g.transparent_enable = true
 vim.opt.wrap = false
 vim.diagnostic.config({
 	underline = false,
-	signs = false,
+	signs = true,
 })
-vim.g.gitsigns_toggle_current_line_blame = true
