@@ -17,7 +17,7 @@
   },
   "memory": {
     "interval": 30,
-    "format": "<span size='13000' foreground='#f5e0dc'> </span> {}%",
+    "format": "<span size='13000' foreground='#f5e0dc'>󰍛 </span> {}%",
     "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G",
     "max-length": 10
   },
