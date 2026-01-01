@@ -1,0 +1,17 @@
+[general]
+import = [
+  "./catpuccin-mocha.toml"
+]
+[font]
+size = 14.0
+normal = {family = "FiraCode Nerd Font"}
+[keyboard]
+bindings = [
+   { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+[[hints.enabled]]
+regex = "[^ ]+\\.rs:\\d+:\\d+"
+command = { program = "code", args = [ "--goto" ] }
+mouse = { enabled = true }
+[window]
+opacity = 0.9
