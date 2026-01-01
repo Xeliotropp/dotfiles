@@ -23,6 +23,7 @@ exec --no-startup-id dunst
 exec --no-startup-id xset s 300 0 
 exec --no-startup-id autotiling
 exec --no-startup-id ~/.config/scripts/profile.sh
+exec --no-startup-id flameshot
 #use the command below when using the tv 
 #xrandr --output HDMI-1-0 --auto --right-of eDP-1
 
@@ -32,4 +33,4 @@ client.unfocused        $overlay2 $overlay2 $overlay2 $overlay2 $overlay2
 client.urgent           $red $red $red $red $red 
 client.placeholder      #00000000 #00000000 #00000000 #00000000 #00000000
 
-output * bg /home/xeliotrop/wallpapers/Bend.jpg fill
+output * bg /home/xeliotrop/wallpapers/Flame.jpg fill
