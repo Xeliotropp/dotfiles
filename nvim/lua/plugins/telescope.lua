@@ -22,6 +22,7 @@ return {
 		vim.keymap.set("n", "<leader>ps", function()
 			builtin.grep_string({ search = vim.fn.input("Search: > ") })
 		end)
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 		vim.keymap.set("n", "<leader>pb", builtin.buffers, { desc = "Telescope buffers" })
 		vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action' })
 	end,

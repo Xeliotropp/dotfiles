@@ -15,8 +15,7 @@ vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { silent = true 
 vim.keymap.set("n", "<leader>bl", ":BufferLineMoveNext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bh", ":BufferLineMovePrev<CR>", { silent = true })
 
-vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>", { silent = true })
-vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {silent = true})
+vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { silent = true })
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { silent = true })
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { silent = true })
