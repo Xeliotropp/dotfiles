@@ -23,30 +23,9 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 PATH=$JAVA_HOME/bin:$PATH
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
-export LIBVA_DRIVER_NAME=nvidia
-export MOZ_DISABLE_RDD_SANDBOX=1
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH=$PATH:$(npm config get prefix)/bin
-
-# Lazy-load NVM for faster startup
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-nvm() {
-  unset -f nvm node npm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
-}
-node() {
-  unset -f nvm node npm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  node "$@"
-}
-npm() {
-  unset -f nvm node npm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  npm "$@"
-}
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
@@ -74,6 +53,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt correct
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-color "${(s.:.)LS_COLORS}" 
 zstyle ':completion:*' menu no 
@@ -87,12 +67,8 @@ export VISUAL=/usr/sbin/nvim
 alias vim="nvim"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias cd="z"
-alias ..="cd .."
-alias ...="cd ../../"
 alias shutdown="shutdown -h now"
 alias neofetch="fastfetch"
-alias grep="rg"
-alias rg=grep
 alias shut="shutdown"
 alias ls="ls -l --color"
 alias youtube="ytsurf"
@@ -110,4 +86,11 @@ if [ -f /usr/bin/fastfetch ];  then
   neofetch
 else
   sudo pacman -S fastfetch
+fi
+
+# fnm
+FNM_PATH="/home/xeliotrop/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
 fi

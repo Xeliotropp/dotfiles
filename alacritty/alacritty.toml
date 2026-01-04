@@ -15,3 +15,4 @@ command = { program = "code", args = [ "--goto" ] }
 mouse = { enabled = true }
 [window]
 opacity = 0.9
+blur = true

@@ -1,5 +1,11 @@
 include current-theme.conf
-font_size 12.0
+
+font_family     FiraCode-Regular 
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+font_size 14.0
 
 cursor_shape block
 
@@ -9,7 +15,7 @@ cursor_beam_thickness 1.5
 
 scrollback_lines 10000 
 
-enable_audio_bell no
+enable_audio_bell yes
 
 background_opacity 0.9
 
@@ -18,10 +24,3 @@ background_blur 1
 linux_display_server auto
 
 wayland_enable_ime yes
-
-# BEGIN_KITTY_FONTS
-font_family      family="MesloLGL Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS

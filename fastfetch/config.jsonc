@@ -4,7 +4,6 @@
     "source": "~/dotfiles/fastfetch/arch-min.txt",
     "type": "file",
     "padding": {
-      "top": 2,
       "right": 6,
     },
   },
@@ -12,13 +11,10 @@
     "separator": " ",
   },
   "modules": [
-    "break",
-    "break",
     {
       "type": "title",
       "keyWidth": 10,
     },
-    "break",
     {
       "type": "os",
       "key": " ",
