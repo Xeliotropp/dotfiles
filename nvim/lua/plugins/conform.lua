@@ -1,5 +1,38 @@
 return {
   "stevearc/conform.nvim",
+  opts = {
+    formatters_by_ft = {
+      blade = { "blade-formatter" },
+      php = { "pint" },
+    },
+    formatters = {
+      injected = { options = { ignore_errors = true } },
+
+      ["blade-formatter"] = {
+        command = "blade-formatter",
+        args = {
+          "--write",
+          "$FILENAME",
+          "--wrap-line-length",
+          9999,
+          "--wrap-attributes",
+          "preserve-aligned",
+        },
+        stdin = false,
+      },
+
+      pint = {
+        meta = {
+          url = "https://github.com/laravel/pint",
+          description =
+          "Laravel Pint is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.",
+        },
+        args = { "$FILENAME" },
+        stdin = false,
+      },
+    },
+  },
+
   config = function()
     require("conform").setup({
       formatters_by_ft = {
