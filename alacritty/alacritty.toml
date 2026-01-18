@@ -3,7 +3,7 @@ import = [
   "./catpuccin-mocha.toml"
 ]
 [font]
-size = 14.0
+size = 12.0
 normal = {family = "FiraCode Nerd Font"}
 [keyboard]
 bindings = [

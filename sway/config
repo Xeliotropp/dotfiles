@@ -10,7 +10,7 @@ exec --no-startup-id dex-autostart --autostart --environment sway
 input type:keyboard {
     xkb_layout "us,bg"
     xkb_variant ",phonetic"
-    xkb_options "grp:alt_shift_toggle,ctrl:swapcaps"
+    xkb_options "grp:alt_shift_toggle,ctrl:nocaps"
 } 
 bar { 
      swaybar_command waybar
