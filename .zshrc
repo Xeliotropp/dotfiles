@@ -20,9 +20,9 @@ else
 fi
 
 # Paths
-export PATH="$HOME/.local/bin:$PATH"
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
-PATH=$JAVA_HOME/bin:$PATH
+# export PATH="$HOME/.local/bin:$PATH"
+# export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+# PATH=$JAVA_HOME/bin:$PATH
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH=$PATH:$(npm config get prefix)/bin
 eval "$(fnm env --use-on-cd --shell zsh)"
@@ -62,8 +62,8 @@ eval "$(fzf --zsh)"
 
 
 # Aliases
-export EDITOR=/usr/sbin/nvim
-export VISUAL=/usr/sbin/nvim
+export EDITOR=nvim
+export VISUAL=nvim
 alias vim="nvim"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias cd="z"
@@ -94,3 +94,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

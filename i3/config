@@ -12,7 +12,7 @@ smart_borders on
 # auto start applications
 exec xrandr --auto
 exec --no-startup-id dex-autostart --autostart --environment i3
-exec_always --no-startup-id setxkbmap -layout us,bg -variant ,phonetic -option grp:alt_shift_toggle 
+exec_always --no-startup-id setxkbmap -layout us,bg -variant ,phonetic -option grp:alt_shift_toggle, ctrl:nocaps
 exec ~/.fehbg
 exec_always --no-startup-id pkill polybar || true; polybar &
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
@@ -22,8 +22,8 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id dunst 
 # exec --no-startup-id xset s 300 0 
 exec_always --no-startup-id autotiling
+exec_always --no-startup-id picom
 exec_always --no-startup-id pkill flameshot || true; flameshot &
-exec_always --no-startup-id ~/.config/scripts/profile.sh
 #use the command below when using the tv 
 #xrandr --output HDMI-1-0 --auto --right-of eDP-1
 

@@ -48,10 +48,10 @@ return {
         css = { "prettierd", "prettier" },
         blade = { "blade-formatter" }
       },
-      format_on_save = {
-        timeout_ms = 50,
-        lsp_format = "fallback"
-      },
+      --      format_on_save = {
+      --        timeout_ms = 50,
+      --        lsp_format = "fallback"
+      --      },
       default_format_opts = {
         lsp_format = "fallback"
       },

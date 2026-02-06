@@ -1,12 +1,12 @@
 {
   "ipc" : true,
   "layer" : "top",
-  "position" : "top",
-  "modules-left": ["hyprland/workspaces"],
+  "position" : "bottom",
+  "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "network",
-    "hyprland/language",
+    "sway/language",
     "memory",
     "battery",
     "tray"
@@ -25,7 +25,7 @@
     "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G",
     "max-length": 10,
   },
-  "hyprland/language": {
+  "sway/language": {
     "format": "<span foreground='#cba6f7'>󰌌 </span> {short} ",
     "tooltip-format": "{long}",
   },
@@ -59,7 +59,7 @@
     },
     "on-click": "pavucontrol",
   },
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "active-only" : false,
     "disable-scroll": false,
     "warp-on-scroll": true,

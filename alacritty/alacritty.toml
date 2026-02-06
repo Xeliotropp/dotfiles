@@ -9,10 +9,6 @@ normal = {family = "FiraCode Nerd Font"}
 bindings = [
    { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" }
 ]
-[[hints.enabled]]
-regex = "[^ ]+\\.rs:\\d+:\\d+"
-command = { program = "code", args = [ "--goto" ] }
-mouse = { enabled = true }
 [window]
-opacity = 0.9
+opacity = 1.0
 blur = true

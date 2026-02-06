@@ -7,8 +7,8 @@ vim.opt.relativenumber = true -- Show relative line numbers
 -- Other helpful settings you might want
 vim.opt.cursorline = true -- Highlight the current line
 vim.opt.signcolumn = "auto" -- Always show the signcolumn (for git signs, diagnostics, etc.)
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
