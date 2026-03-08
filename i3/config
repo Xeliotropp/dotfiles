@@ -1,11 +1,17 @@
-include ~/.config/i3/keybinds.conf
+# include files
+include ./keybinds.conf
+include ./window_rules.conf
+
+# font
 font pango:FiraCode Regular 10
-#removes the titlebar text
+
 # Set border width
 for_window [class="^.*"] border pixel 2
 for_window [class=".*"] title_format " "
-gaps inner 4px
-gaps outer 2px
+
+# gaps
+gaps inner 1px
+gaps outer 1px
 smart_borders on
 
 
@@ -15,12 +21,14 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec_always --no-startup-id setxkbmap -layout us,bg -variant ,phonetic -option grp:alt_shift_toggle, ctrl:nocaps
 exec ~/.fehbg
 exec_always --no-startup-id pkill polybar || true; polybar &
-exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id bash ~/dotfiles/scripts/docker-compose.bash &
+
+# authenticator for when an app needs you to enter your password
+exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
+exec_always --no-startup-id pkill clipit || true; clipit & 
 
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id dunst 
-# exec --no-startup-id xset s 300 0 
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec_always --no-startup-id pkill flameshot || true; flameshot &

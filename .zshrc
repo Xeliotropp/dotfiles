@@ -13,11 +13,8 @@ if [ -f /usr/bin/zoxide ]; then
 else
   curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 fi
-if [ -f /usr/bin/starship ]; then
-  eval "$(starship init zsh)"
-else
-  curl -sS https://starship.rs/install.sh | sh
-fi
+
+eval "$(oh-my-posh init zsh --config ~/dotfiles/ohmyposh/json.omp.json)"
 
 # Paths
 # export PATH="$HOME/.local/bin:$PATH"
@@ -84,8 +81,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 if [ -f /usr/bin/fastfetch ];  then 
   neofetch
-else
-  sudo pacman -S fastfetch
 fi
 
 # fnm

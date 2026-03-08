@@ -10,7 +10,7 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { silent = true })
-vim.keymap.set("n", "<leader>w", ":w<CR>", {})
+vim.keymap.set("n", "<leader>w", ":wa<CR>", {})
 vim.keymap.set("n", "<leader>wq", ":wqa<CR>", {})
 vim.keymap.set("n", "<leader>q", ":qa<CR>", {})
 
