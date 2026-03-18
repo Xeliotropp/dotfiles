@@ -7,6 +7,11 @@ static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows sel
 static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 4;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 4;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -37,7 +42,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -62,8 +67,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0";
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "drun", "-dpi", "1", NULL };
+static const char *termcmd[]  = { "ghostty", NULL };
+static const char *browsercmd[] = {"helium-browser", NULL};
+static const char *filebrowsercmd[] = {"thunar", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,9 +83,9 @@ static const Key keys[] = {
 
 	{ MODKEY,                       XK_space,  spawn,          SHCMD("rofi -show drun -dpi 1") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      spawn,          SHCMD("helium-browser")},
+	{ MODKEY,                       XK_b,      spawn,          {.v = browsercmd }},
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("blueman-manager")},
-    { MODKEY,                       XK_e,      spawn,          SHCMD("thunar")},
+    { MODKEY,                       XK_e,      spawn,          {.v = filebrowsercmd }},
     { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui")},
     { MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("~/dotfiles/scripts/wallpaper-rofi.sh")},
     { MODKEY,                       XK_p,      spawn,          SHCMD("xrandr --output HDMI-1-0 --auto --right-of eDP-1")},
@@ -90,16 +97,21 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
+    { MODKEY,                       XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+
+    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
