@@ -37,8 +37,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+    { "Helium",   NULL,       NULL,       2     ,       0,            -1 },
+    { "Thunar",   NULL,       NULL,       1 << 9,       1,            -1 },
+    { "steam",    NULL,       NULL,       8     ,       0,            -1 },
 };
 
 /* layout(s) */
@@ -81,7 +82,7 @@ static const Key keys[] = {
     { 0, XF86XK_MonBrightnessUp,   spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh brightness_up") },
     { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh brightness_down") },
 
-	{ MODKEY,                       XK_space,  spawn,          SHCMD("rofi -show drun -dpi 1") },
+	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browsercmd }},
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("blueman-manager")},
