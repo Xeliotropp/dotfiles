@@ -14,14 +14,14 @@ else
   curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 fi
 
-eval "$(oh-my-posh init zsh --config ~/dotfiles/ohmyposh/json.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/dotfiles/config/ohmyposh/json.omp.json)"
 
 # Paths
 # export PATH="$HOME/.local/bin:$PATH"
 # export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 # PATH=$JAVA_HOME/bin:$PATH
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-export PATH=$PATH:$(npm config get prefix)/bin
+# export PATH=$PATH:$(npm config get prefix)/bin
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 source "${ZINIT_HOME}/zinit.zsh"
@@ -39,6 +39,7 @@ else
   compinit -C
 fi
 
+fastfetch
 HISTSIZE=5000
 HISTFILE=~/.histfile
 SAVEHIST=$HISTSIZE
@@ -61,14 +62,10 @@ eval "$(fzf --zsh)"
 # Aliases
 export EDITOR=nvim
 export VISUAL=nvim
-alias vim="nvim"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias cd="z"
 alias shutdown="shutdown -h now"
-alias neofetch="fastfetch"
-alias shut="shutdown"
 alias ls="ls -l --color"
-alias youtube="ytsurf"
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -79,10 +76,6 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-if [ -f /usr/bin/fastfetch ];  then 
-  neofetch
-fi
-
 # fnm
 FNM_PATH="/home/xeliotrop/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then

@@ -1,4 +1,0 @@
-configuration {
- modes: "window,drun,run,ssh,filebrowser";
-}
-@theme "/usr/share/rofi/themes/tokyonight.rasi"

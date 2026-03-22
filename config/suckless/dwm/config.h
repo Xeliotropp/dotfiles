@@ -17,15 +17,14 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "MesloLGS Nerd Font:size=10" };
 static const char dmenufont[]       = "MesloLGS Nerd Font:size=10";
-static const char col_background[]  = "#24273a";
-static const char col_border[]      = "#5b6078";
-static const char col_foreground[]  = "#cad3f5";
-static const char col_foreground1[] = "#a5adcb";
-static const char col_green[]       = "#a6e3a1";
+static const char col_background[]  = "#282828";
+static const char col_border[]      = "#98971a";
+static const char col_foreground[]  = "#a89984";
+static const char col_foreground1[] = "#fbf1c7";
 static const char *colors[][3]      = {
 	/*               fg         bg                   border   */
-	[SchemeNorm] = { col_foreground1, col_background, col_green},
-	[SchemeSel]  = { col_foreground, col_background,  col_green},
+	[SchemeNorm] = { col_foreground1, col_background, col_border},
+	[SchemeSel]  = { col_foreground, col_background,  col_border},
 };
 
 /* tagging */
@@ -56,7 +55,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -75,12 +74,12 @@ static const char *filebrowsercmd[] = {"thunar", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-    { 0, XF86XK_AudioMicMute,      spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh mic_mute") },
-    { 0, XF86XK_AudioRaiseVolume,  spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh volume_up") },
-    { 0, XF86XK_AudioLowerVolume,  spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh volume_down") },
-    { 0, XF86XK_AudioMute,         spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh volume_mute") },
-    { 0, XF86XK_MonBrightnessUp,   spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh brightness_up") },
-    { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/dotfiles/dunst/volume_brightness.sh brightness_down") },
+    { 0, XF86XK_AudioMicMute,      spawn, SHCMD("~/.config/dunst/volume_brightness.sh mic_mute") },
+    { 0, XF86XK_AudioRaiseVolume,  spawn, SHCMD("~/.config/dunst/volume_brightness.sh volume_up") },
+    { 0, XF86XK_AudioLowerVolume,  spawn, SHCMD("~/.config/dunst/volume_brightness.sh volume_down") },
+    { 0, XF86XK_AudioMute,         spawn, SHCMD("~/.config/dunst/volume_brightness.sh volume_mute") },
+    { 0, XF86XK_MonBrightnessUp,   spawn, SHCMD("~/.config/dunst/volume_brightness.sh brightness_up") },
+    { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.config/dunst/volume_brightness.sh brightness_down") },
 
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
