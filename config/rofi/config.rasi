@@ -3,4 +3,8 @@ configuration {
 }
 //@theme "/usr/share/rofi/themes/tokyonight.rasi"
 
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+@theme "/home/xeliotrop/.config/rofi/themes/catppuccin-lavrent-mocha.rasi"

@@ -48,11 +48,11 @@ function get_volume_icon {
     volume=$(get_volume)
     mute=$(get_mute)
     if [ "$volume" -eq 0 ] || [ "$mute" == "yes" ] ; then
-        volume_icon=" "
+        volume_icon="  "
     elif [ "$volume" -lt 50 ]; then
         volume_icon=" "
     else
-        volume_icon=" "
+        volume_icon="  "
     fi 
 }
 
@@ -60,9 +60,9 @@ function get_volume_icon {
 function get_mic_icon {
     mute=$(get_mic_mute)
     if [ "$mute" == "yes" ] ; then
-        mic_icon="󰍭"
+        mic_icon="󰍭 "
     else
-        mic_icon=""
+        mic_icon=" "
     fi
 }
 
