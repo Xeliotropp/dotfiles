@@ -18,15 +18,15 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "MesloLGS Nerd Font:size=10" };
 static const char dmenufont[]       = "MesloLGS Nerd Font:size=10";
 
-static const char col_background[]  = "#24273a";
-static const char col_border[]      = "#5b6078";
-static const char col_foreground[]  = "#cad3f5";
-static const char col_foreground1[] = "#a5adcb";
-static const char col_green[]       = "#a6e3a1";
+static const char col_background[]  = "#32302f";
+static const char col_border[]      = "#665c54";
+static const char col_foreground[]  = "#d4be98";
+static const char col_foreground1[] = "#a9b665";
+static const char col_green[]       = "#89b482";
 static const char *colors[][3]      = {
 	/*               fg         bg                   border   */
-	[SchemeNorm] = { col_foreground1, col_background, col_green},
-	[SchemeSel]  = { col_foreground, col_background,  col_green},
+	[SchemeNorm] = { col_foreground, col_background, col_green},
+	[SchemeSel]  = { col_foreground1, col_background,  col_green},
 };
 
 /* tagging */
@@ -38,7 +38,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-    { "Helium",   NULL,       NULL,       2     ,       0,            -1 },
+    { "Brave",    NULL,       NULL,       2     ,       0,            -1 },
     { "steam",    NULL,       NULL,       8     ,       0,            -1 },
 };
 
@@ -56,7 +56,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -70,7 +70,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0";
 static const char *dmenucmd[] = { "rofi", "-show", "drun", "-dpi", "1", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *browsercmd[] = {"helium-browser", NULL};
+static const char *browsercmd[] = {"brave-origin-nightly", NULL};
 static const char *filebrowsercmd[] = {"thunar", NULL};
 
 static const Key keys[] = {
@@ -88,7 +88,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("blueman-manager")},
     { MODKEY,                       XK_e,      spawn,          {.v = filebrowsercmd }},
     { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui")},
-    { MODKEY,                       XK_w,      spawn,          SHCMD("/home/xeliotrop/dotfiles/scripts/wallpaper-rofi.sh")},
+    { MODKEY,                       XK_w,      spawn,          SHCMD("/home/xeliotrop/dotfiles/config/scripts/wallpaper-rofi.sh")},
     { MODKEY,                       XK_p,      spawn,          SHCMD("xrandr --output HDMI-1-0 --auto --right-of eDP-1")},
     { MODKEY,                       XK_c,      spawn,          SHCMD("rofi run -show calc -no-show-match -no-sort")},
 

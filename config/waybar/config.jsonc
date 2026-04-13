@@ -1,0 +1,81 @@
+{
+  "ipc" : true,
+  "layer" : "top",
+  "position" : "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": [
+    "network",
+    "hyprland/language",
+    "battery",
+    "clock",
+    "tray"
+  ],
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+  },
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>  </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "memory": {
+    "interval": 30,
+    "format": "<span size='13000' foreground='#f5e0dc'>󰍛 </span> {used:0.1f}G",
+    "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G",
+    "max-length": 10,
+  },
+  "hyprland/language": {
+    "format": "<span foreground='#cba6f7'>󰌌 </span> {short} ",
+    "tooltip-format": "{long}",
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
+    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}",
+  },
+  "network": {
+      "interface" : "wlan0",
+      "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>",
+      "format-ethernet": "<span size='13000' foreground='#f5e0dc'> 󰤭 </span>",
+      "format-disconnected": "<span size='13000' foreground='#f5e0dc'> 󰤭 </span>",
+      "tooltip-format-wifi": "Signal Strength: {signalStrength}%",
+      "tooltip-format-ethernet": "Connected via Ethernet",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "nmtui"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "],
+    },
+    "on-click": "pavucontrol",
+  },
+  "hyprland/workspaces": {
+    "active-only" : false,
+    "disable-scroll": false,
+    "warp-on-scroll": true,
+    "format": "{name}",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+    "persistent-workspaces": {
+        "*": 9,
+     },
+    },
+    "hyprland/window" : {
+      "max-length" : 40,
+      "separate-outputs" : false,
+      "floating" : true
+    }
+}
