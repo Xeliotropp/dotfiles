@@ -7,3 +7,4 @@ cd ..;
 cd ~/dotfiles/suckless/slstatus;
 sudo make clean install;
 
+stow -R -t ~/.config config   

@@ -51,7 +51,7 @@
       "tooltip-format-wifi": "Signal Strength: {signalStrength}%",
       "tooltip-format-ethernet": "Connected via Ethernet",
       "tooltip-format-disconnected": "Disconnected",
-      "on-click": "nmtui"
+      "on-click": "kitty nmtui"
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
@@ -69,9 +69,6 @@
       "urgent": "",
       "focused": "",
       "default": "",
-    "persistent-workspaces": {
-        "*": 9,
-     },
     },
     "hyprland/window" : {
       "max-length" : 40,

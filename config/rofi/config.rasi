@@ -9,4 +9,6 @@ configuration {
 
 //@theme "/home/xeliotrop/.config/rofi/themes/catppuccin-lavrent-mocha.rasi"
 
-@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+
+@theme "/home/xeliotrop/.config/rofi/themes/catppuccin-lavrent-mocha.rasi"

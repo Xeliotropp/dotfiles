@@ -20,7 +20,6 @@ exec --no-startup-id ~/.fehbg
 exec_always --no-startup-id dunst 
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id pkill flameshot || true; flameshot &
-exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id pkill polybar || true; polybar &
 
 client.focused          #a9b665   #a9b665a1 #a9b66565 #a9b665a1 #a9b665
