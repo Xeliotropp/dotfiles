@@ -5,6 +5,7 @@
     font-size: 12px;
     min-height: 0;
     font-weight: normal;
+    padding-bottom: 1px;
 }
 
 window#waybar {
@@ -62,7 +63,8 @@ button:hover {
 #tray,
 #network,
 #mode,
-#scratchpad {
+#scratchpad,
+#language {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 4px;
@@ -73,7 +75,6 @@ button:hover {
 
 #clock {
     color: @maroon;
-    border-bottom: 2px solid @maroon;
 }
 
 #clock.date {
@@ -88,7 +89,6 @@ button:hover {
 
 #network {
     color: @yellow;
-    border-bottom: 2px solid @yellow;
 }
 
 #idle_inhibitor {
@@ -102,7 +102,6 @@ button:hover {
 
 #battery {
     color: @green;
-    border-bottom: 2px solid @green;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

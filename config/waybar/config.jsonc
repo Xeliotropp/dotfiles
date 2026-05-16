@@ -25,7 +25,7 @@
     "max-length": 10,
   },
   "hyprland/language": {
-    "format": "<span foreground='#cba6f7'>󰌌 </span> {short} ",
+    "format": "<span foreground='#cba6f7'>󰌌 </span> {short}",
     "tooltip-format": "{long}",
   },
   "battery": {
@@ -44,10 +44,9 @@
     "tooltip-format": "{time}",
   },
   "network": {
-      "interface" : "wlan0",
-      "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>",
-      "format-ethernet": "<span size='13000' foreground='#f5e0dc'> 󰤭 </span>",
-      "format-disconnected": "<span size='13000' foreground='#f5e0dc'> 󰤭 </span>",
+      "format-wifi": "<span size='13000' foreground='#f5e0dc'> </span>",
+      "format-ethernet": "<span size='13000' foreground='#f5e0dc'> 󰤭  </span>",
+      "format-disconnected": "<span size='13000' foreground='#f5e0dc'> 󰤭  </span>",
       "tooltip-format-wifi": "Signal Strength: {signalStrength}%",
       "tooltip-format-ethernet": "Connected via Ethernet",
       "tooltip-format-disconnected": "Disconnected",

@@ -99,6 +99,11 @@
       "folders": "/"
     },
     {
+      "type": "disk",
+      "key": "{#separator}│  {#keys}󰋊 Disk (Data)",
+      "folders": "/mnt/Data"
+    },
+    {
       "type": "custom",
       "format": "{#1}│"
     },
