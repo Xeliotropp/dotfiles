@@ -55,10 +55,6 @@ end
 hl.bind(mainMod .. " + 0",          hl.dsp.focus({ workspace = 10 }))
 hl.bind(mainMod .. " + SHIFT + 0",  hl.dsp.window.move({ workspace = 10 }))
 
--- Special workspace (scratchpad)
-hl.bind(mainMod .. " + S",          hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + P",  hl.dsp.window.move({ workspace = "special:magic" }))
-
 -- Scroll workspaces with mouse wheel
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }), { mouse = true })
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }), { mouse = true })
+hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }), { mouse = true })
+hl.bind(mainMod .. " + SHIFT + TAB",   hl.dsp.focus({ workspace = "e-1" }), { mouse = true })

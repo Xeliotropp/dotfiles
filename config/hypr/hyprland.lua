@@ -3,6 +3,7 @@ require("window_rules")
 require("keybinds")
 require("programs")
 require("input")
+require("monitors")
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/lib/xfce-polkit/xfce-polkit")
@@ -15,13 +16,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
 end)
 
-hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1,
-})
-
 hl.config({
     general = {
         border_size = 1,
@@ -30,8 +24,8 @@ hl.config({
             inactive_border = mocha.subtext0,
         },
         resize_on_border = true,
-        gaps_in  = 4,
-        gaps_out = 8,
+        gaps_in  = 2,
+        gaps_out = 2,
         layout   = "master",
         allow_tearing = false,
     },
