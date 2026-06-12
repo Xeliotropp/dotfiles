@@ -63,7 +63,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-    {vol_perc,        },
+    { run_command, "󰕾 %s%% | ", "pamixer --get-volume" },
     { battery_perc,   " : %s%% | ",   "BAT0" },
 	{ datetime, "%s | ",           "%a %d %b, %H:%M"},
 };

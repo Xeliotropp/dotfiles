@@ -6,6 +6,7 @@ require("input")
 require("monitors")
 
 hl.on("hyprland.start", function()
+    hl.exec_cmd("hyprctl setcursor macos-tahoe-cursor 12")
     hl.exec_cmd("/usr/lib/xfce-polkit/xfce-polkit")
     hl.exec_cmd("waybar")
     hl.exec_cmd("flameshot")

@@ -1,11 +1,11 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "MesloLGS Nerd Font";
+    font-family: "JetBrainsMono Nerd Font";
     font-size: 12px;
     min-height: 0;
-    font-weight: normal;
-    padding-bottom: 1px;
+    font-weight: bold;
+    padding: 1px;
 }
 
 window#waybar {
@@ -28,7 +28,6 @@ button {
 button:hover {
     background: inherit;
     color: @mauve;
-    border-top: 2px solid @mauve;
 }
 
 #workspaces button {
@@ -44,7 +43,6 @@ button:hover {
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
     color: @mauve;
-    border-top: 2px solid @mauve;
 }
 
 #workspaces button.urgent {
@@ -75,6 +73,7 @@ button:hover {
 
 #clock {
     color: @maroon;
+    font-size:14px;
 }
 
 #clock.date {
