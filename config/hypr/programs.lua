@@ -1,5 +1,5 @@
 terminal    = "kitty"
 fileManager = "thunar"
 menu        = "rofi -show drun -dpi 1"
-browser     = "firefox"
+browser     = "brave-origin"
 notes       = "obsidian"
