@@ -6,9 +6,9 @@ return {
 		require("bufferline").setup({
 			options = {
 				mode = "buffers", -- set to "tabs" to only show tabpages instead
-				style_preset = "default", -- or "default"
+				style_preset = "minimal", -- or "default"
 				themable = true,
-				numbers = "none", -- can be "ordinal", "buffer_id", "both", or a function
+				numbers = "ordinal", -- can be "ordinal", "buffer_id", "both", or a function or none to disable
 				close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 				right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 				left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
@@ -35,9 +35,9 @@ return {
 				show_tab_indicators = true,
 				show_duplicate_prefix = true,
 				persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-				separator_style = "slope", -- can be "slant" | "slope" | "thick" | "thin" | { 'any', 'any' }
+				separator_style = "thick", -- can be "slant" | "slope" | "thick" | "thin" | { 'any', 'any' }
 				enforce_regular_tabs = false,
-				always_show_bufferline = true,
+				always_show_bufferline = false,
 				hover = {
 					enabled = true,
 					delay = 200,

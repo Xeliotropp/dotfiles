@@ -1,3 +1,3 @@
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    start-hyprland
+    slstatus -s | dwl -s ~/dotfiles/config/dwl/autostart.sh
 fi
