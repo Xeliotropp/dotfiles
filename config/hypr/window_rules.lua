@@ -23,7 +23,7 @@ hl.window_rule({
 
 hl.window_rule({
     name = "browser-ws2",
-    match = { class = "^(brave-origin)$"},
+    match = { class = "^(firefox)$"},
     workspace = "2"
 })
 

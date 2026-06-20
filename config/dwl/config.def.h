@@ -10,7 +10,7 @@ static const unsigned int borderpx         = 1;  /* border pixel of windows */
 
 static const int showbar                   = 1;
 static const int topbar                    = 1;
-static const char *fonts[]                 = {"JetBrainsMono Nerd Font:size=11"};
+static const char *fonts[]                 = {"NotoSansMono-Regular:size=11"};
 static const float rootcolor[]             = COLOR(0x1e1e2eff);
 static uint32_t colors[][3]                = {
     /*               fg          bg          border    */
@@ -125,7 +125,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "foot", NULL };
+static const char *termcmd[] = { "kitty", NULL };
 static const char *menucmd[] = { "rofi", "-show", "drun", "-dpi", "1", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *filebrowsercmd[] = { "thunar", NULL };

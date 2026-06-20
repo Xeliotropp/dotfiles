@@ -1,11 +1,11 @@
 {
   "ipc" : true,
   "position" : "top",
-  "modules-left": ["dwl/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "network",
-    "dwl/language",
+    "hyprland/language",
     "battery",
     "tray"
   ],
@@ -28,7 +28,7 @@
             }
         },
   },
-  "dwl/language": {
+  "hyprland/language": {
     "format": "<span foreground='#cba6f7'>󰌌 </span> {short}",
     "tooltip-format": "{long}",
   },
@@ -56,12 +56,12 @@
       "tooltip-format-disconnected": "Disconnected",
       "on-click": "kitty nmtui"
   },
-  "dwl/workspaces": {
+  "hyprland/workspaces": {
         "format": " {icon} ",
         "format-icons":{
             "default" : "󰧞",
             "active" : "",
-            "empty" : ""
+            "empty" : ""
         },
         "persistent-workspaces" : {"*": 6}
     },

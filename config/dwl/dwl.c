@@ -2057,7 +2057,7 @@ maximizenotify(struct wl_listener *listener, void *data)
 	Client *c = wl_container_of(listener, c, maximize);
 	if (c->surface.xdg->initialized
 			&& wl_resource_get_version(c->surface.xdg->toplevel->resource)
-					< XDG_TOPLEVEL_WM_CAPABILITIES_SINCE_VERSION)
+					< XDG_TOPLEVEL_WM_CAPABILITIES_MINIMIZE)
 		wlr_xdg_surface_schedule_configure(c->surface.xdg);
 }
 

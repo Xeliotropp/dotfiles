@@ -27,7 +27,7 @@ hl.config({
         resize_on_border = true,
         gaps_in  = 2,
         gaps_out = 2,
-        layout   = "master",
+        layout   = "dwindle",
         allow_tearing = false,
     },
 })
