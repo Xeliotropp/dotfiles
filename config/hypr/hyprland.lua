@@ -4,10 +4,10 @@ require("keybinds")
 require("programs")
 require("input")
 require("monitors")
+require("variables")
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("hyprctl setcursor macos-tahoe-cursor 12")
-    hl.exec_cmd("/usr/lib/xfce-polkit/xfce-polkit")
+    hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("waybar")
     hl.exec_cmd("flameshot")
     hl.exec_cmd("hyprpaper")
@@ -25,8 +25,8 @@ hl.config({
             inactive_border = mocha.subtext0,
         },
         resize_on_border = true,
-        gaps_in  = 2,
-        gaps_out = 2,
+        gaps_in  = 4,
+        gaps_out = 4,
         layout   = "dwindle",
         allow_tearing = false,
     },
@@ -37,4 +37,3 @@ hl.gesture({
     direction = "horizontal",
     action    = "workspace",
 })
-

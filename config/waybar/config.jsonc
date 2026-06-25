@@ -1,13 +1,20 @@
 {
   "ipc" : true,
   "position" : "top",
+  "height" : 35,
+  "spacing" : 5,
+  "mode" : "dock", 
+  "margin" : "0px 4px 4px 4px",
+  "reload_style_on_change" : true,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
-    "network",
     "hyprland/language",
+    "network",
+    "pulseaudio",
     "battery",
-    "tray"
+    "tray",
+    "custom/power-menu",
   ],
   "tray": {
     "icon-size": 16,
@@ -29,7 +36,7 @@
         },
   },
   "hyprland/language": {
-    "format": "<span foreground='#cba6f7'>󰌌 </span> {short}",
+    "format": "<span foreground='#cba6f7'>󰌌 </span> {long}",
     "tooltip-format": "{long}",
   },
   "battery": {
@@ -56,6 +63,9 @@
       "tooltip-format-disconnected": "Disconnected",
       "on-click": "kitty nmtui"
   },
+  "pulseaudio" : {
+      "format" : "  {volume}%",
+  },
   "hyprland/workspaces": {
         "format": " {icon} ",
         "format-icons":{
@@ -63,6 +73,11 @@
             "active" : "",
             "empty" : ""
         },
-        "persistent-workspaces" : {"*": 6}
+        "persistent-workspaces" : {"*": 9}
+    },
+    "custom/power-menu" : {
+      "format" : " ⏻ ",
+      "on-click" : "tschuss",
+      "tooltip-format" : "Power Menu",
     },
 }

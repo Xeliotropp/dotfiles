@@ -48,6 +48,7 @@ if [[ -d "$FNM_PATH" ]]; then
     eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 # ----------------------------------------------------ALIASES-----------------------------------------------------------------
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
@@ -57,8 +58,9 @@ alias ls="ls -lh --color=always --group-directories-first"
 alias mkdir="mkdir -p"
 
 # -------------------------------------------------------PROMPT---------------------------------------------------------------
-PROMPT='%F{#ed8796}[%*] %F{#a6da95}%n%F{reset}@%F{#8aadf4}%m %F{#eed49f}%~ %# '
-echo "Здравей, свят!"
+
+PROMPT=' %F{#ed8796}[%*] %F{#a6da95}%n%F{reset}@%F{#8aadf4}%m %F{#eed49f}%~ %# '
+echo "\n Здравей, свят!"
 
 # -------------------------------------------------------SDKMAN---------------------------------------------------------------
 export SDKMAN_DIR="$HOME/.sdkman"

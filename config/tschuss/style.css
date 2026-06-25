@@ -1,0 +1,49 @@
+#window {
+    background-color: rgba(17, 17, 27, 0.308);
+    
+}
+
+button {
+    background-color: rgba(32, 34, 36, 0.2);
+    border: solid;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 130px;
+    color: rgb(166, 227, 161);
+}
+
+#description-shutdown {
+    font-size: 35px;
+    color: white;
+}
+#shutdown:hover{
+    background-color: rgba(243, 139, 168, 0.4);
+
+}
+
+#description-reboot {
+    font-size: 35px;
+    color: white;
+}
+
+#description-logout {
+    font-size: 35px;
+    color: white;
+}
+
+#description-hibernate {
+    font-size: 35px;
+    color: white;
+}
+
+#description-suspend {
+    font-size: 35px;
+    color: white;
+}
+
+#description-lock {
+    font-size: 35px;
+    color: white;
+}

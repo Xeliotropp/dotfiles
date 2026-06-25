@@ -1,4 +1,4 @@
-terminal    = "kitty"
+terminal    = "alacritty"
 fileManager = "thunar"
 menu        = "rofi -show drun -dpi 1"
 browser     = "firefox"

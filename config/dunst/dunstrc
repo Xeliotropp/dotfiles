@@ -45,7 +45,7 @@
     idle_threshold = 0
 
     ### Text ###
-    font = MesloLGS Nerd Font 9
+    font = JetBrainsMono Nerd Font 9
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"

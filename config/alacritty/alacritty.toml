@@ -4,11 +4,11 @@ import = [
 ]
 [font]
 size = 12.0
-normal = {family = "FiraCode"}
+normal = {family = "JetBrainsMono Nerd Font"}
 [keyboard]
 bindings = [
    { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" }
 ]
 [window]
-opacity = 1.0
+opacity = 0.8
 blur = true

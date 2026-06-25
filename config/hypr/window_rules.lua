@@ -5,10 +5,14 @@ hl.config({
             size = 3,
             passes = 2,
         },
+        rounding=8,
     },
     animations = {
-        enabled = false,
-    },
+        enabled = true,
+        hl.curve("overshoot", { type = "bezier", points = { {0.3, 0.5}, {0.1, 1.1} } }),
+        hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "overshoot", style = "slide" }),
+        hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "overshoot" }),
+    }
 })
 
 -- Dynamic borders
@@ -18,6 +22,13 @@ hl.window_rule({
     match = {
         float = 0,
         workspace = "w[tv1]s[false]"
+    }
+})
+-- Removes the border on floating windows
+hl.window_rule({
+    border_size = 0,
+    match = {
+        float = true
     }
 })
 
@@ -32,7 +43,11 @@ hl.window_rule({
     match = {class = "^(discord)$"},
     workspace = "3"
 })
-
+hl.window_rule({
+    name = "steam",
+    match = {class = "^(steam)$"},
+    workspace = "5"
+})
 hl.window_rule({
     name = "steam",
     match = {class = "^(steam)$"},
