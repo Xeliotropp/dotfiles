@@ -5,10 +5,10 @@ vim.opt.updatetime = 300
 -- For relative line numbers
 vim.opt.relativenumber = true -- Show relative line numbers
 
-vim.opt.cursorline = true 
+vim.opt.cursorline = true
 vim.opt.signcolumn = "auto"
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -26,4 +26,7 @@ vim.api.nvim_create_autocmd("CursorHold", {
         vim.diagnostic.open_float(nil, { focus = false })
     end,
 })
-
+vim.g.netrw_liststyle = 3  
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 15
+vim.g.netrw_altv = 0

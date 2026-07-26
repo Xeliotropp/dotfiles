@@ -15,7 +15,7 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/dunst/volume_brightn
 
 -- Apps
 hl.bind(main_mod .. " + Return", hl.dsp.exec_cmd(terminal), { locked = true, repeating = true })
-hl.bind("CTRL + SHIFT + Return", hl.dsp.exec_cmd(terminal))
+hl.bind(main_mod .. "+ SHIFT + Return", hl.dsp.exec_cmd("alacritty --class=terminal-float"))
 hl.bind(main_mod .. " + E",         hl.dsp.exec_cmd(fileManager))
 hl.bind(main_mod .. " + B",         hl.dsp.exec_cmd(browser))
 hl.bind(main_mod .. " + O",         hl.dsp.exec_cmd(notes))
@@ -42,7 +42,6 @@ end)
 
 -- Launcher / tools
 hl.bind(main_mod .. " + Space",       hl.dsp.exec_cmd(menu))
-hl.bind("CTRL + ALT + Escape",       hl.dsp.exec_cmd("hyprlock"))
 hl.bind("CTRL + SHIFT + Escape",     hl.dsp.exec_cmd("kitty btop"))
 hl.bind(main_mod .. " + SHIFT + W",   hl.dsp.exec_cmd("~/.config/scripts/hyprpaper.sh"))
 hl.bind(main_mod .. " + SHIFT + R",   hl.dsp.exec_cmd("hyprctl reload && pkill waybar; waybar &"))

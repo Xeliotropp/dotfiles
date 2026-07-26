@@ -1,53 +1,42 @@
-return {
-  {
-    "mason-org/mason.nvim",
-    config = function()
-      require("mason").setup({
-        ui = {
-          icons = {
+vim.pack.add({
+    "https://github.com/mason-org/mason.nvim",
+    "https://github.com/mason-org/mason-lspconfig.nvim",
+    "https://github.com/neovim/nvim-lspconfig",
+})
+
+require("mason").setup({
+    ui = {
+        icons = {
             package_installed = "✓",
             package_pending = "➜",
             package_uninstalled = "✗",
-          },
         },
-      })
-    end,
-  },
-  {
-    "mason-org/mason-lspconfig.nvim",
-    opts = {},
-    dependencies = {
-      { "mason-org/mason.nvim", opts = {} },
-      "neovim/nvim-lspconfig",
     },
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "rust_analyzer",
-          "ts_ls",
-          "phpactor",
-          "html",
-          "clangd",
-          "eslint",
-        },
-      })
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    lazy = false,
-    config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+})
 
-      vim.lsp.config("*", {
-        capabilities = capabilities,
-      })
-      vim.lsp.enable("ts_ls.setup")
-      vim.lsp.enable("enable.solargraph.setup")
-      vim.lsp.enable("enable.html.setup")
-      vim.lsp.enable("enable.lua_ls.setup")
-      vim.lsp.enable("phpactor")
-    end,
-  },
-}
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "lua_ls",
+        "rust_analyzer",
+        "ts_ls",
+        "phpactor",
+        "html",
+        "clangd",
+        "eslint",
+    },
+})
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+vim.lsp.config("*", {
+    capabilities = capabilities,
+})
+
+vim.lsp.enable({
+    "lua_ls",
+    "rust_analyzer",
+    "ts_ls",
+    "phpactor",
+    "html",
+    "clangd",
+    "eslint",
+})

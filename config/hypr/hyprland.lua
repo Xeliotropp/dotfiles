@@ -21,8 +21,8 @@ hl.config({
     general = {
         border_size = 1,
         col = {
-            active_border   = { colors = { mocha.green } },
-            inactive_border = mocha.subtext0,
+            active_border   = { colors = { mocha.subtext1} },
+            inactive_border = mocha.surface0,
         },
         resize_on_border = true,
         gaps_in  = 4,

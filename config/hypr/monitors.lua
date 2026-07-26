@@ -4,5 +4,3 @@ hl.monitor({
     position = "auto",
     scale    = 1,
 })
-
-
