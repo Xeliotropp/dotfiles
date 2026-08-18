@@ -36,7 +36,7 @@
         },
   },
   "hyprland/language": {
-    "format": "<span foreground='#cba6f7'>󰌌 </span> {long}",
+    "format": "<span foreground='#cba6f7'>󰌌</span> {long}",
     "tooltip-format": "{long}",
   },
   "battery": {

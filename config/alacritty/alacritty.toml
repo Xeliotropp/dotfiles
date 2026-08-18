@@ -3,8 +3,8 @@ import = [
   "./catpuccin-mocha.toml"
 ]
 [font]
-size = 12.0
-normal = {family = "JetBrainsMono Nerd Font"}
+size = 8.0
+normal = {family = "MesloLGSNerdFontMono Regular"}
 [keyboard]
 bindings = [
    { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" }
