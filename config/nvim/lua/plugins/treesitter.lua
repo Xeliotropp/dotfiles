@@ -1,30 +1,27 @@
-vim.pack.add({
-    "https://github.com/nvim-treesitter/nvim-treesitter",
-})
 
-require("nvim-treesitter").install({
-    "html",
-    "css",
-    "typescript",
-    "javascript",
-    "tsx",
-    "lua",
-    "vim",
-    "vimdoc",
-    "c",
-    "cpp",
-    "bash",
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = {
-        "html", "css", "typescript", "javascript",
-        "typescriptreact", "javascriptreact",
-        "lua", "vim", "help",
-        "c", "cpp", "sh",
+ return {
+  "nvim-treesitter/nvim-treesitter",
+  opts = {
+    ensure_installed = {
+      "html",
+      "css",
+      "typescript",
+      "javascript",
+      "lua",
+      "blade",
+      "vim",
+      "vimdoc"
     },
-    callback = function()
-        vim.treesitter.start()
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-    end,
-})
+    ignore_install = { "php", "php_only" },
+    auto_install = true,
+    highlight = {
+      enable = true,
+    },
+    indent = {
+      enable = true,
+    },
+  },
+  config = function(_, opts)
+    require("nvim-treesitter").setup(opts)
+  end,
+}

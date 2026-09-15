@@ -30,6 +30,12 @@
       "key": "{#separator}│  {#keys}󰍹 OS"
     },
     {
+      "key" : "{#separator}│  {#keys} Age",
+      "type" : "disk", 
+      "folders" : "/",
+      "format": "{create-time:10} ({days} Days)"
+    },
+    {
       "type": "kernel",
       "key": "{#separator}│  {#keys}󰒋 Kernel"
     },

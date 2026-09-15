@@ -1,9 +1,8 @@
 -- Enable line numbers
-vim.opt.number = true -- Show line numbers
-vim.opt.updatetime = 300
+vim.opt.number = true
 
 -- For relative line numbers
-vim.opt.relativenumber = true -- Show relative line numbers
+vim.opt.relativenumber = true
 
 vim.opt.cursorline = true
 vim.opt.signcolumn = "auto"
@@ -21,12 +20,8 @@ vim.diagnostic.config({
 	underline = false,
 	signs = true,
 })
-vim.api.nvim_create_autocmd("CursorHold", {
-    callback = function()
-        vim.diagnostic.open_float(nil, { focus = false })
-    end,
+vim.filetype.add({
+  pattern = {
+    ['.*%.blade%.php'] = 'blade',
+  },
 })
-vim.g.netrw_liststyle = 3  
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 15
-vim.g.netrw_altv = 0

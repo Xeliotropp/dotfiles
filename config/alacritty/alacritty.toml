@@ -4,11 +4,14 @@ import = [
 ]
 [font]
 size = 8.0
-normal = {family = "MesloLGSNerdFontMono Regular"}
+normal = {family = "JetBrainsMono Nerd Font"}
 [keyboard]
 bindings = [
    { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" }
 ]
 [window]
-opacity = 0.8
+opacity = 1.0
 blur = true
+
+[terminal.shell]
+program = "tmux"

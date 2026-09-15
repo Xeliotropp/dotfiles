@@ -1,9 +1,14 @@
-vim.pack.add({
-    "https://github.com/tpope/vim-fugitive",
-    "https://github.com/lewis6991/gitsigns.nvim",
-})
-
-require("gitsigns").setup({
-    current_line_blame = true,
-    -- toggle_word_diff = true,
-})
+return {
+	{
+		"tpope/vim-fugitive",
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup({
+				current_line_blame = true,
+        -- toggle_word_diff = true,
+			})
+		end,
+	},
+}
