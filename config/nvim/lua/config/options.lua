@@ -25,3 +25,5 @@ vim.filetype.add({
     ['.*%.blade%.php'] = 'blade',
   },
 })
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+vim.keymap.set('n', '/', ':SearchBoxIncSearch<CR>', {silent = true})

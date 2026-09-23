@@ -20,7 +20,7 @@ return {
         group_empty = false,
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
       },
     })
   end,

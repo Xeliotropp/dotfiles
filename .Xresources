@@ -1,0 +1,14 @@
+dwm.font: JetBrainsMono Nerd Font:size=10
+dwm.foreground: #bac2de
+dwm.background: #11111b
+dwm.border: #313244
+dwm.foregroundSel: #a6e3a1
+dwm.backgroundSel: #11111b
+dwm.borderSel: #bac2de
+dwm.borderpx: 1
+dwm.snap: 32
+dwm.showbar: 1
+dwm.topbar: 1
+dwm.nmaster: 1
+dwm.resizehints: 1
+dwm.mfact: 0.50
