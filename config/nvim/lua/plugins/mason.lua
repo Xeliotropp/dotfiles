@@ -26,13 +26,25 @@ return {
           "lua_ls",
           "rust_analyzer",
           "ts_ls",
-          "phpactor",
           "html",
           "clangd",
           "eslint",
+          "jedi_language_server",
         },
       })
     end,
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = {"mason-org/mason.nvim"},
+    config = function ()
+     require("mason-tool-installer").setup({
+       ensure_installed = {
+         "black",
+         "prettier"
+       }
+     })
+    end
   },
   {
     "neovim/nvim-lspconfig",
@@ -43,11 +55,14 @@ return {
       vim.lsp.config("*", {
         capabilities = capabilities,
       })
-      vim.lsp.enable("ts_ls.setup")
-      vim.lsp.enable("enable.solargraph.setup")
-      vim.lsp.enable("enable.html.setup")
-      vim.lsp.enable("enable.lua_ls.setup")
-      vim.lsp.enable("phpactor")
+      vim.lsp.enable({
+        "ts_ls",
+        "html",
+        "lua_ls",
+        "clangd",
+        "eslint",
+        "jedi_language_server",
+      })
     end,
   },
 }

@@ -1,27 +1,21 @@
 return {
-  "nvim-tree/nvim-tree.lua",
-  version = "*",
-  lazy = false,
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  },
-
-  config = function()
-    vim.g.loaded_netrw = 1
-    vim.g.loaded_netrwPlugin = 1
-    require("nvim-tree").setup({
-      sort = {
-        sorter = "case_sensitive",
-      },
-      view = {
-        width = 30,
-      },
-      renderer = {
-        group_empty = false,
-      },
-      filters = {
-        dotfiles = false,
-      },
-    })
-  end,
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    },
+    lazy = false, -- neo-tree will lazily load itself
+    config = function ()
+     require("neo-tree").setup({
+       window = {
+         mappings = {
+           ["<C-f>"] = "close_window"
+         }
+       }
+     }) 
+    end
+  }
 }
