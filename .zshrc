@@ -49,6 +49,7 @@ if [[ -d "$FNM_PATH" ]]; then
 fi
 
 export QT_QPA_PLATFORMTHEME=qt6ct
+export TERMINAL=/usr/bin/alacritty
 
 # ----------------------------------------------------ALIASES-----------------------------------------------------------------
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"

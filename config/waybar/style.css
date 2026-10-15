@@ -1,7 +1,7 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "MesloLGSNerdFont";
     font-size: 14px;
     min-height: 0;
     font-weight: bold;
@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: transparent; /* used to be for a whole bar:  background-color: @crust;*/
+    background-color: @crust; /* used to be for a whole bar:  background-color: @crust; for a transparent bar just set it to 'transparent'*/
     color: @overlay0;
 }
 

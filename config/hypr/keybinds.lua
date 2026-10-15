@@ -43,7 +43,7 @@ end)
 -- Launcher / tools
 hl.bind(main_mod .. " + Space",       hl.dsp.exec_cmd(menu))
 hl.bind("CTRL + SHIFT + Escape",     hl.dsp.exec_cmd("kitty btop"))
-hl.bind(main_mod .. " + SHIFT + W",   hl.dsp.exec_cmd("~/.config/scripts/hyprpaper.sh"))
+hl.bind(main_mod .. " + SHIFT + W",   hl.dsp.exec_cmd("~/.config/scripts/awww.sh"))
 hl.bind(main_mod .. " + SHIFT + R",   hl.dsp.exec_cmd("hyprctl reload && pkill waybar; waybar &"))
 hl.bind(main_mod .. " + SHIFT + S",   hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 hl.bind(main_mod .. " + V",           hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"))

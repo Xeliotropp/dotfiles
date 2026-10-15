@@ -36,14 +36,14 @@ return {
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    dependencies = {"mason-org/mason.nvim"},
-    config = function ()
-     require("mason-tool-installer").setup({
-       ensure_installed = {
-         "black",
-         "prettier"
-       }
-     })
+    dependencies = { "mason-org/mason.nvim" },
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "black",
+          "prettier"
+        }
+      })
     end
   },
   {

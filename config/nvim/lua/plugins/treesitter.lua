@@ -1,5 +1,4 @@
-
- return {
+return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {
@@ -8,11 +7,9 @@
       "typescript",
       "javascript",
       "lua",
-      "blade",
       "vim",
       "vimdoc"
     },
-    ignore_install = { "php", "php_only" },
     auto_install = true,
     highlight = {
       enable = true,

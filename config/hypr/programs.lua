@@ -1,6 +1,6 @@
-terminal       = "alacritty"
+terminal       = "kitty"
+terminal_float = "kitty"
 fileManager    = "thunar"
 menu           = "rofi -show drun -dpi 1"
 browser        = "firefox"
 notes          = "obsidian"
-terminal_float = "alacritty"

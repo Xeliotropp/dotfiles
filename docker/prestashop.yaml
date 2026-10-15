@@ -1,0 +1,22 @@
+services:
+  prestashop:
+    image: prestashop/prestashop:9.2.0
+    ports:
+      - "8070:80"
+    environment:
+      DB_SERVER: docker-db-1
+      DB_NAME: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWD: ${MYSQL_PASSWORD}
+    networks:
+      - mysql-phpmyadmin
+    volumes:
+      - psdata:/var/www/html
+
+networks:
+  mysql-phpmyadmin:
+    external: true
+    name: docker_mysql-phpmyadmin
+
+volumes:
+  psdata:
